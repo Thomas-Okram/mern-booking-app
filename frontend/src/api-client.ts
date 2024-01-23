@@ -178,11 +178,20 @@ export const searchHotels = async (
 };
 
 export const fetchHotels = async (): Promise<HotelType[]> => {
-  const response = await fetch(`${API_BASE_URL}/api/hotels`);
-  if (!response.ok) {
-    throw new Error("Error fetching hotels");
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/hotels`);
+    console.log("Response status:", response.status);
+
+    if (!response.ok) {
+      console.log("Error fetching hotels:", await response.json());
+      throw new Error("Error fetching hotels");
+    }
+
+    return response.json();
+  } catch (error) {
+    console.log("Error in fetchHotels:", error);
+    throw error;
   }
-  return response.json();
 };
 
 export const fetchHotelById = async (hotelId: string): Promise<HotelType> => {
