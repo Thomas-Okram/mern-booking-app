@@ -1,6 +1,6 @@
 MERN Booking App Setup:
 
-Follow these steps to set up the MERN Booking App locally.
+Follow these steps to set up the MERN Booking App https://mern-hotel-booking-app-14hp.onrender.comly.
 
 Prerequisites:
 

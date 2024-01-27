@@ -16,7 +16,7 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedhttps://mern-hotel-booking-app-14hp.onrender.coms": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },

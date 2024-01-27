@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+*.https://mern-hotel-booking-app-14hp.onrender.com
 
 # Editor directories and files
 .vscode/*
