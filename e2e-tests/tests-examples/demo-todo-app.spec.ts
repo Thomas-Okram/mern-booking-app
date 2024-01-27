@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://demo.playwright.dev/todomvc');
+  await page.goto('https://mern-hotel-booking-app-14hp.onrender.com://demo.playwright.dev/todomvc');
 });
 
 const TODO_ITEMS = [
@@ -34,7 +34,7 @@ test.describe('New Todo', () => {
       TODO_ITEMS[1]
     ]);
 
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 2);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 2);
   });
 
   test('should clear text input field when an item is added', async ({ page }) => {
@@ -47,7 +47,7 @@ test.describe('New Todo', () => {
 
     // Check that input is empty.
     await expect(newTodo).toBeEmpty();
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
   });
 
   test('should append new items to the bottom of the list', async ({ page }) => {
@@ -65,18 +65,18 @@ test.describe('New Todo', () => {
 
     // Check all items in one call.
     await expect(page.getByTestId('todo-title')).toHaveText(TODO_ITEMS);
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
   });
 });
 
 test.describe('Mark all as completed', () => {
   test.beforeEach(async ({ page }) => {
     await createDefaultTodos(page);
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
   });
 
   test.afterEach(async ({ page }) => {
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
   });
 
   test('should allow me to mark all items as completed', async ({ page }) => {
@@ -85,7 +85,7 @@ test.describe('Mark all as completed', () => {
 
     // Ensure all todos have 'completed' class.
     await expect(page.getByTestId('todo-item')).toHaveClass(['completed', 'completed', 'completed']);
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
   });
 
   test('should allow me to clear the complete state of all items', async ({ page }) => {
@@ -102,7 +102,7 @@ test.describe('Mark all as completed', () => {
     const toggleAll = page.getByLabel('Mark all as complete');
     await toggleAll.check();
     await expect(toggleAll).toBeChecked();
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
 
     // Uncheck first todo.
     const firstTodo = page.getByTestId('todo-item').nth(0);
@@ -112,7 +112,7 @@ test.describe('Mark all as completed', () => {
     await expect(toggleAll).not.toBeChecked();
 
     await firstTodo.getByRole('checkbox').check();
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
 
     // Assert the toggle all is checked again.
     await expect(toggleAll).toBeChecked();
@@ -163,12 +163,12 @@ test.describe('Item', () => {
     await firstTodoCheckbox.check();
     await expect(firstTodo).toHaveClass('completed');
     await expect(secondTodo).not.toHaveClass('completed');
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
 
     await firstTodoCheckbox.uncheck();
     await expect(firstTodo).not.toHaveClass('completed');
     await expect(secondTodo).not.toHaveClass('completed');
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 0);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 0);
   });
 
   test('should allow me to edit an item', async ({ page }) => {
@@ -187,14 +187,14 @@ test.describe('Item', () => {
       'buy some sausages',
       TODO_ITEMS[2]
     ]);
-    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 'buy some sausages');
+    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 'buy some sausages');
   });
 });
 
 test.describe('Editing', () => {
   test.beforeEach(async ({ page }) => {
     await createDefaultTodos(page);
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
   });
 
   test('should hide other controls when editing', async ({ page }) => {
@@ -204,7 +204,7 @@ test.describe('Editing', () => {
     await expect(todoItem.locator('label', {
       hasText: TODO_ITEMS[1],
     })).not.toBeVisible();
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 3);
   });
 
   test('should save edits on blur', async ({ page }) => {
@@ -218,7 +218,7 @@ test.describe('Editing', () => {
       'buy some sausages',
       TODO_ITEMS[2],
     ]);
-    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 'buy some sausages');
+    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 'buy some sausages');
   });
 
   test('should trim entered text', async ({ page }) => {
@@ -232,7 +232,7 @@ test.describe('Editing', () => {
       'buy some sausages',
       TODO_ITEMS[2],
     ]);
-    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 'buy some sausages');
+    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 'buy some sausages');
   });
 
   test('should remove the item if an empty text string was entered', async ({ page }) => {
@@ -273,7 +273,7 @@ test.describe('Counter', () => {
     await newTodo.press('Enter');
     await expect(todoCount).toContainText('2');
 
-    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 2);
+    await checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 2);
   });
 });
 
@@ -320,7 +320,7 @@ test.describe('Persistence', () => {
     await expect(todoItems).toHaveClass(['completed', '']);
 
     // Ensure there is 1 completed item.
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
 
     // Now reload.
     await page.reload();
@@ -336,14 +336,14 @@ test.describe('Routing', () => {
     // make sure the app had a chance to save updated todos in storage
     // before navigating to a new view, otherwise the items can get lost :(
     // in some frameworks like Durandal
-    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, TODO_ITEMS[0]);
+    await checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, TODO_ITEMS[0]);
   });
 
   test('should allow me to display active items', async ({ page }) => {
     const todoItem = page.getByTestId('todo-item');
     await page.getByTestId('todo-item').nth(1).getByRole('checkbox').check();
 
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
     await page.getByRole('link', { name: 'Active' }).click();
     await expect(todoItem).toHaveCount(2);
     await expect(todoItem).toHaveText([TODO_ITEMS[0], TODO_ITEMS[2]]);
@@ -353,7 +353,7 @@ test.describe('Routing', () => {
     const todoItem = page.getByTestId('todo-item'); 
     await page.getByTestId('todo-item').nth(1).getByRole('checkbox').check();
 
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
 
     await test.step('Showing all items', async () => {
       await page.getByRole('link', { name: 'All' }).click();
@@ -377,14 +377,14 @@ test.describe('Routing', () => {
 
   test('should allow me to display completed items', async ({ page }) => {
     await page.getByTestId('todo-item').nth(1).getByRole('checkbox').check();
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
     await page.getByRole('link', { name: 'Completed' }).click();
     await expect(page.getByTestId('todo-item')).toHaveCount(1);
   });
 
   test('should allow me to display all items', async ({ page }) => {
     await page.getByTestId('todo-item').nth(1).getByRole('checkbox').check();
-    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
+    await checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page, 1);
     await page.getByRole('link', { name: 'Active' }).click();
     await page.getByRole('link', { name: 'Completed' }).click();
     await page.getByRole('link', { name: 'All' }).click();
@@ -418,20 +418,20 @@ async function createDefaultTodos(page: Page) {
   }
 }
 
-async function checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page: Page, expected: number) {
+async function checkNumberOfTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page: Page, expected: number) {
   return await page.waitForFunction(e => {
-    return JSON.parse(https://mern-hotel-booking-app-14hp.onrender.comStorage['react-todos']).length === e;
+    return JSON.parse(https://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage['react-todos']).length === e;
   }, expected);
 }
 
-async function checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page: Page, expected: number) {
+async function checkNumberOfCompletedTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page: Page, expected: number) {
   return await page.waitForFunction(e => {
-    return JSON.parse(https://mern-hotel-booking-app-14hp.onrender.comStorage['react-todos']).filter((todo: any) => todo.completed).length === e;
+    return JSON.parse(https://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage['react-todos']).filter((todo: any) => todo.completed).length === e;
   }, expected);
 }
 
-async function checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.comStorage(page: Page, title: string) {
+async function checkTodosInhttps://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage(page: Page, title: string) {
   return await page.waitForFunction(t => {
-    return JSON.parse(https://mern-hotel-booking-app-14hp.onrender.comStorage['react-todos']).map((todo: any) => todo.title).includes(t);
+    return JSON.parse(https://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comStorage['react-todos']).map((todo: any) => todo.title).includes(t);
   }, title);
 }

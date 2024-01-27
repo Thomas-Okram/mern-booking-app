@@ -1,6 +1,6 @@
 MERN Booking App Setup:
 
-Follow these steps to set up the MERN Booking App https://mern-hotel-booking-app-14hp.onrender.comly.
+Follow these steps to set up the MERN Booking App https://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.comly.
 
 Prerequisites:
 
@@ -10,7 +10,7 @@ Backend:
 
 1. Clone the repository:
 
-git clone https://github.com/Thomas-Okram/mern-booking-app.git
+git clone https://mern-hotel-booking-app-14hp.onrender.com://github.com/Thomas-Okram/mern-booking-app.git
 
 cd mern-booking-app
 
