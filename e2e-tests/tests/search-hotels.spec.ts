@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-const UI_URL = "http://localhost:5174/";
+const UI_URL =
+  "https://mern-hotel-booking-app-14hp.onrender.com://mern-hotel-booking-app-14hp.onrender.com5174/";
 
 test.beforeEach(async ({ page }) => {
   await page.goto(UI_URL);
