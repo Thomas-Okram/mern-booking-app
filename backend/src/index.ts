@@ -44,6 +44,6 @@ app.get("*", (req: Request, res: Response) => {
 
 app.listen(7000, () => {
   console.log(
-    "server running on https://mern-hotel-booking-app-14hp.onrender.comhost:7000"
+    "server running on https://mern-hotel-booking-app-14hp.onrender.com"
   );
 });
